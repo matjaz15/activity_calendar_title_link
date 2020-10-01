@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+<!--
+    VIEWS
+-->
+
+    <!-- FORM VIEW -->
+    <record id="view_activity_popup_form_inherit" model="ir.ui.view">
+        <field name="name">activity popup expansion</field>
+        <field name="model">mail.activity</field>
+        <field name="inherit_id" ref="mail.mail_activity_view_form_popup"/>
+        <field name="arch" type="xml">
+            <xpath expr="//sheet/group[1]" position="before">
+                <button name="open_origin" type="object" class="centre oe_link" nolabel="1">
+                    <h1><field name="res_name"/></h1>
+                </button>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
